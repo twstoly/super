@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-sm-12">
+      <p><b>Author ~ {{quote.author}}</b></p>
+    </div>
+</div>
+<div class="row">
+    <div class="icons col-sm-6">
+      <ul class=" ps-0" >
+        <i class="upvote far fa-thumbs-up">
+          <b><span class="text-danger"> 0 </span></b>
+        </i>
+        <i class="downvote far fa-thumbs-down">
+          <b><span class="text-primary"> 0 </span></b>
+        </i>
+      </ul>
+    </div>
+    <div class="col-sm-6">
+        <button (click)="quoteComplete(true)" class="btn btn-dark"><i class="fas fa-trash"></i> Delete</button>
+    </div>
+</div>
