@@ -9,12 +9,16 @@ import { Data } from 'src/app/Class/data';
 export class MainControlComponent implements OnInit {
 
   quotes:Data[] = [
-    new Data(0,"Lamborghini","Mr. Ill do it later never owned a Lamborghini. Get that into your head and stay ahead of the game its your chance to take the game and run. When you stop working, you start to.",new Date(2021,8,21)),
-    new Data(1,"Twst","Don't save your best for when you think the material calls for it. Always bring your full potential to every take, and be on top of your job, or they will replace you.I had to try something prove",new Date(2050,8,27)),
-    new Data(2,"Mwangale","I don't harp on the negative because if you do, then there's no progression. There's no froward movement. You got to always look on the bright side of things, and we are in control..",new Date(2026,8,27)),
-    new Data(3,"jstBooks","When your dreams are bigger than the places you find yourself in, sometimes you need to seek out your own reminders that there is more. And there is always more waiting for you on ..",new Date(2021,12,25)),
+    new Data(0,"Lamborghini","Mr. Ill do it later never owned a Lamborghini. Get that into your head and stay ahead of the game its your chance to take the game and run. When you stop working, you start to.", "Feruccio"),
+    new Data(1,"welcomeLand","Don't save your best for when you think the material calls for it. Always bring your full potential to every take, and be on top of your job, or they will replace you.I had to try something prove", "jstBooks.."),
+    new Data(2,"Mwangale","I don't harp on the negative because if you do, then there's no progression. There's no froward movement. You got to always look on the bright side of things, and we are in control.."," Mwangale"),
+    new Data(3,"jstBooks","When your dreams are bigger than the places you find yourself in, sometimes you need to seek out your own reminders that there is more. And there is always more waiting for you on ..", " Icy"),
+    new Data(4,"Lamborghini","Mr. Ill do it later never owned a Lamborghini. Get that into your head and stay ahead of the game its your chance to take the game and run. When you stop working, you start to.", "Feruccio"),
+    new Data(5,"welcomeLand","Don't save your best for when you think the material calls for it. Always bring your full potential to every take, and be on top of your job, or they will replace you.I had to try something prove", "jstBooks.."),
+    new Data(6,"Mwangale","I don't harp on the negative because if you do, then there's no progression. There's no froward movement. You got to always look on the bright side of things, and we are in control.."," Mwangale"),
+    new Data(7,"jstBooks","When your dreams are bigger than the places you find yourself in, sometimes you need to seek out your own reminders that there is more. And there is always more waiting for you on ..", " Icy"),
   ]
-  
+
   completeQuote(isComplete: any, index: number){
     if(isComplete){
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
@@ -30,7 +34,7 @@ export class MainControlComponent implements OnInit {
     quote.completeDate = new Date(quote.completeDate);
     this.quotes.push(quote);
   }
-
+  
   ngOnInit(): void {
   }
 
