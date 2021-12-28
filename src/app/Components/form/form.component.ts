@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Data } from 'src/app/Class/data';
 
 @Component({
@@ -8,16 +9,23 @@ import { Data } from 'src/app/Class/data';
 })
 export class FormComponent implements OnInit {
 
-  newQuote = new Data(0,"","",new Date())
+  newQuote = new Data(0,"","","")
   
   @Output() addQuote:any = new EventEmitter<Data>();
 
+
   submitQuote(){
-    // var quoteLength = this.newQuote.length + 1;
     this.addQuote.emit(this.newQuote)
   }
+  resetForm(quoteForm: NgForm){
+    quoteForm.reset()
+  }
+  
 
   ngOnInit(): void {
   }
+  
 
 }
+
+
