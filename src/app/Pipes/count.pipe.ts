@@ -15,10 +15,12 @@ export class CountPipe implements PipeTransform {
     var dateDifferenceSeconds = dateDifference * 0.001;
     const seconds = 86400;
 
-    let counter = dateDifferenceSeconds/seconds;
+    let counter = Math.floor(dateDifferenceSeconds/seconds)
 
     if(counter >= 1 && value > nowWithoutTime){
-      return("Remaining Days: " + " " + counter );
+      return(null);
+    }else if(counter == 30){
+      return ("You have jst posted a few seconds ago..")
     }else if(counter == 0){
       return ("This is the last Day: " + counter)
     }
