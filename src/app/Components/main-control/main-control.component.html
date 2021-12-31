@@ -11,9 +11,7 @@
           <div class="card-body">
               <p class="card-text">
                 <app-quote [quote]="quote"></app-quote> ~ 
-                <b>
-                  <em class="color">{{quote.name}}</em>
-                </b> 
+                <b><em class="color">{{quote.name}}</em></b> 
               </p>
               <app-quote-details [quote]="quote" (iscomplete)="completeQuote($event,i)"></app-quote-details>
           </div>
